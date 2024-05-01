@@ -5,7 +5,7 @@ const handleClick = () => {
 export const NewOrder = () => {
     return (
         <>
-            <button className="button1" onClick={handleClick}> Generar Orden </button>
+            <button className="button1" onClick={handleClick}> <b>Generar Orden</b> </button>
         </>
     )
 }

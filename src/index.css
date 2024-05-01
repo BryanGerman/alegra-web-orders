@@ -16,17 +16,29 @@ code {
   font-size: x-large;
   background-color: white;
   border-radius: 50%;
-  border: 1px solid lightblue;
-  height: 300px;
-  width: 300px;
+  border: 1px solid #00c3ad;
+  height: 200px;
+  width: 200px;
 }
 
 .button1:hover{
-  background-color: lightskyblue;
+  background-color: #00c3ad;
   color: white;
 }
 
 .button1:active {
   background-color: lightcoral;
   color: white;
+}
+
+@media all and (max-width:30em){
+  .button1{
+    height: 100px;
+    width: 100px;
+    font-size: small;
+  }
+}
+
+h1 {
+  color: #00c3ad;
 }

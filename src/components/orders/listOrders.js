@@ -2,6 +2,7 @@
 import Stack from '@mui/material/Stack';
 import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types'
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
     width: 120,
@@ -10,29 +11,21 @@ const StyledPaper = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     textAlign: 'center',
     alignContent: 'center',
-  }));
+}));
 
-
-export const ListOrders = () => {
+export const ListOrders = ({orders}) => {
     return (
         <Stack direction="row" spacing={2} useFlexGap flexWrap="wrap">
-            <StyledPaper variant="elevation">
-                <h1>Orden: {1}</h1>
-                <p><b>Plato: </b> {'Plato de comida'}</p>
-            </StyledPaper>
-            <StyledPaper variant="elevation">
-                <h1>Orden: {2}</h1>
-                <p><b>Plato: </b> {'Plato de comida 2'}</p>
-            </StyledPaper>
-            <StyledPaper variant="elevation">
-                <h1>Orden: {1}</h1>
-                <p><b>Plato: </b> {'Plato de comida'}</p>
-            </StyledPaper>
-            <StyledPaper variant="elevation">
-                <h1>Orden: {2}</h1>
-                <p><b>Plato: </b> {'Plato de comida 2'}</p>
-            </StyledPaper>
-        </Stack>    
-        
+            {orders.filter((order) => order.status === "RECEIVED").map((order) => {
+                return (<StyledPaper variant="elevation">
+                    <h1>Orden: {order.order_number}</h1>
+                    <p><b>Plato: </b> {order.name}</p>
+                </StyledPaper>)
+            })}
+        </Stack>
     )
+}
+
+ListOrders.propTypes = {
+    orders: PropTypes.array.isRequired
 }

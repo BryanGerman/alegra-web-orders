@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/alegra-web-orders/static/css/main.06bb5420.css",
+    "main.js": "/alegra-web-orders/static/js/main.4e7fd4e5.js",
+    "static/js/453.e6405aca.chunk.js": "/alegra-web-orders/static/js/453.e6405aca.chunk.js",
+    "index.html": "/alegra-web-orders/index.html",
+    "main.06bb5420.css.map": "/alegra-web-orders/static/css/main.06bb5420.css.map",
+    "main.4e7fd4e5.js.map": "/alegra-web-orders/static/js/main.4e7fd4e5.js.map",
+    "453.e6405aca.chunk.js.map": "/alegra-web-orders/static/js/453.e6405aca.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.06bb5420.css",
+    "static/js/main.4e7fd4e5.js"
+  ]
+}
